@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script src="/JS/Base.js"></script>
+
+	</head>
+
+	<body>
+
+		<a-scene background="color:white">
+			<!---------------CAMERA------------------->
+			<a-entityid="camera" camera look-controls wasd-controls position="0 50 250"></a-entity>
+			
+			<!---------------ASSETS------------------->
+			<a-assets>
+				<a-asset-item id="car-gltf" src="./assets/Car/scene.gltf"></a-asset-item>
+			</a-assets>
+			<!--------------CAR-GLTF-MODLE----------------------->
+			<a-entity>
+				<a-entity car
+					gltf-model="#car-gltf"
+					scale="15 15 15"
+					position="0 30 70"
+					rotation="0 90 0"
+				></a-entity>
+
+			<!---------------BASE--------------------->
+			<a-entity id="base" base></a-entity>
+
+		</a-scene>
+
+	</body>
+
+</html>
